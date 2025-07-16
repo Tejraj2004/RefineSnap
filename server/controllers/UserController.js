@@ -3,15 +3,15 @@ import userModel from '../models/userModel.js'
 
 // API Controller function to Manage Clerk User with database
 //http:localhost:4000/api/user/webhooks
-const clerkWebhooks = async (requestAnimationFrame,res)=>{
+const clerkWebhooks = async (req,res)=>{
     try {
         //  Create a Svix instance with clerk webhook secret
         const whook = new Webhook(process.env.CLERK_WEBHOOK_SECRET)
 
-        await whook.verify(JSON.stringify(requestAnimationFrame.body),{
-            "svix-id":requestAnimationFrame.headers["svix-id"],
-            "svix-timestamp":requestAnimationFrame.headers["svix-timestamp"],
-            "svix-signature":requestAnimationFrame.headers["svix-signature"]
+        await whook.verify(JSON.stringify(req.body),{
+            "svix-id":req.headers["svix-id"],
+            "svix-timestamp":req.headers["svix-timestamp"],
+            "svix-signature":req.headers["svix-signature"]
         })
 
         const {data, type} = req.body
