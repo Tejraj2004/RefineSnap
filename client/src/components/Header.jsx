@@ -20,8 +20,8 @@ const Header = () => {
         </div>
 
         {/* Right Side */}
-        <div className='w-full max-w-md'>
-            <img src={assets.header_img} alt="" />
+        <div className='flex-1 flex justify-center'>
+            <img className='w-full max-w-md object-contain rounded-md' src={assets.Demo_img} alt="" />
         </div>
     </div>
   )
