@@ -1,15 +1,17 @@
 # 🎨 RefineSnap – AI Background Removal  
-RefineSnap is a sleek AI-powered web app that lets users remove image backgrounds instantly with just one click. Built using the MERN stack, it integrates with the **Clipdrop API** for high-quality, fast, and reliable background removal.  
 
-Whether you're a designer, content creator, or just need quick transparent images — RefineSnap makes it effortless.  
+RefineSnap is a sleek AI-powered web app that lets users remove image backgrounds instantly with just one click. It features **Razorpay integration first and foremost**, allowing users to purchase credits and subscriptions seamlessly for image processing. Built using the MERN stack, it also integrates with the **Clipdrop API** for high-quality, fast, and reliable background removal.  
+
+Whether you're a designer, content creator, or just need quick transparent images — RefineSnap makes it effortless while showcasing smooth payment handling with Razorpay.  
 
 ---
 
 ## 🚀 Overview  
 ✨ A simple yet powerful platform where:  
 
-- 📤 Users can upload any image (JPG/PNG)  
-- ✂️ Background is instantly removed with AI precision  
+- 💳 Users can purchase credits via **Razorpay** to process images  
+- 📤 Upload any image (JPG/PNG)  
+- ✂️ Background is instantly removed with AI precision using **Clipdrop API**  
 - 📂 Download the processed image directly in seconds  
 - 💻 Clean and responsive UI for smooth usage  
 
@@ -23,6 +25,7 @@ Whether you're a designer, content creator, or just need quick transparent image
 | Backend        | Node.js, Express.js           |  
 | Database       | MongoDB + Mongoose            |  
 | API Handling   | Axios, RESTful Endpoints      |  
+| Payment Gateway| **Razorpay**                  |  
 | Authentication | Clerk.dev (optional)          |  
 | Deployment     | Render                        |  
 | Version Control| Git, GitHub                   |  
@@ -32,17 +35,33 @@ Whether you're a designer, content creator, or just need quick transparent image
 ## 🎯 Key Features  
 
 👤 For Users  
+- 💳 Purchase credits and subscriptions with **Razorpay** (simulate payment success for testing)  
 - 📂 Upload images in JPG/PNG format  
-- ✨ AI-based background removal using Clipdrop API  
+- ✨ AI-based background removal using **Clipdrop API**  
 - 📥 One-click image download after processing  
 - 📱 Fully responsive UI  
 
 🛠️ For Developers  
 - ⚡ Lightweight MERN setup  
 - 🔄 Easy integration with external AI APIs  
+- 💸 Razorpay integration for subscription and credits  
 - 🧹 Clean codebase for quick customization  
 
 ---
+
+## 💳 Subscription & Credits  
+
+Users can purchase credits to process images. Three subscription plans are available:  
+
+| Plan       | Credits | Price (USD) |  
+|------------|--------|-------------|  
+| Basic      | 100    | $10         |  
+| Advanced   | 500    | $50         |  
+| Business   | 5000   | $250        |  
+
+- Credits are consumed each time an image is processed.  
+- Razorpay payment gateway is used for purchasing credits.  
+- Payment success is simulated in development for testing image upload.  
 
 ## 📦 Prerequisites  
 
@@ -52,6 +71,7 @@ Make sure the following tools are installed before running the project:
 - MongoDB (Local or MongoDB Atlas)  
 - Git  
 - npm (comes with Node.js)  
+- Razorpay account (for live payments)  
 
 ---
 
@@ -80,6 +100,4 @@ Make sure the following tools are installed before running the project:
 ---
 
 ## 🌟 Final Note  
-RefineSnap isn’t just a background remover — it’s a step toward making **design effortless and accessible for everyone**. With its clean interface and AI power, your images are always ready for the spotlight. ✨  
-
----
+RefineSnap isn’t just a background remover — it’s a step toward making **design effortless and accessible for everyone**. With its clean interface, AI power, and subscription-based credit system via **Razorpay**, your images are always ready for the spotlight. ✨  
