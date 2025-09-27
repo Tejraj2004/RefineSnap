@@ -3,6 +3,7 @@ import express from 'express'
 import cors from 'cors'
 import connectDB from './configs/mongodb.js'
 import userRouter from './routes/useRoutes.js'
+import ImageRouter from './routes/ImageRoutes.js'
 
 //App Config
 const PORT = process.env.PORT || 4000
@@ -14,9 +15,11 @@ await connectDB()
 app.use(express.json())//to parse any request
 app.use(cors())// cors helps us to connect our client running on differnt port
 
+
 //API routes
 app.get('/',(req,res)=>res.send("API Working"))
 app.use('/api/user',userRouter)
+app.use('/api/image',ImageRouter)
 
 app.listen(PORT, ()=> console.log("Server Running on port "+PORT))
  
